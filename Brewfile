@@ -45,6 +45,8 @@ install vim
 install ssh-copy-id
 install npm
 install iterm2
+install ngrep
+
 
 # Remove outdated versions from the cellar
 cleanup
