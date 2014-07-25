@@ -15,24 +15,16 @@ install bash
 # Install wget with IRI support
 install wget --enable-iri
 
-# Install RingoJS and Narwhal
-# Note that the order in which these are installed is important; see http://git.io/brew-narwhal-ringo.
-install ringojs
-install narwhal
-
 # Install more recent versions of some OS X tools
 install vim --override-system-vi
 tap homebrew/dupes
-install homebrew/dupes/grep
-tap josegonzalez/homebrew-php
-install php55
+tap homebrew/versions
+tap homebrew/homebrew-php
+install php55 --with-pgsql
+install php55-intl php55-xdebug composer php55-mcrypt
 
-# This formula didn’t work well last time I tried it:
-#install homebrew/dupes/screen
-
-# Install other useful binaries
+# Install other useful tools
 install ack
-#install exiv2
 install git
 install imagemagick --with-webp
 install lynx
@@ -44,9 +36,15 @@ install tree
 install webkit2png
 install zopfli
 install p7zip
-
-tap homebrew/versions
-install lua52
+install nmap
+install postgresql
+install openssl
+install curl
+install git
+install vim
+install ssh-copy-id
+install npm
+install iterm2
 
 # Remove outdated versions from the cellar
 cleanup

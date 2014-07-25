@@ -247,18 +247,28 @@ function unquarantine() {
 
 # Install Grunt plugins and add them as `devDependencies` to `package.json`
 # Usage: `gi contrib-watch contrib-uglify zopfli`
-function gi() {
-	local IFS=,
-	eval npm install --save-dev grunt-{"$*"}
+# function gi() {
+#	local IFS=,
+#	eval npm install --save-dev grunt-{"$*"}
+#}
+
+# `p` with no arguments opens the current directory in PhpStorm, otherwise
+# opens the given location
+function p() {
+	if [ $# -eq 0 ]; then
+		pstorm .
+	else
+		pstorm "$@"
+	fi
 }
 
-# `m` with no arguments opens the current directory in TextMate, otherwise
+# `a` with no arguments opens the current directory in Atom, otherwise
 # opens the given location
-function m() {
+function a() {
 	if [ $# -eq 0 ]; then
-		mate .
+		atom .
 	else
-		mate "$@"
+		atom "$@"
 	fi
 }
 
@@ -294,16 +304,16 @@ function o() {
 
 # `np` with an optional argument `patch`/`minor`/`major`/`<version>`
 # defaults to `patch`
-function np() {
-	git pull --rebase && \
-	rm -rf node_modules && \
-	npm install && \
-	npm test && \
-	npm version ${1:=patch} && \
-	npm publish && \
-	git push origin master && \
-	git push origin master --tags
-}
+# function np() {
+#	git pull --rebase && \
+#	rm -rf node_modules && \
+#	npm install && \
+#	npm test && \
+#	npm version ${1:=patch} && \
+#	npm publish && \
+#	git push origin master && \
+#	git push origin master --tags
+#}
 
 # `tre` is a shorthand for `tree` with hidden files and color enabled, ignoring
 # the `.git` directory, listing directories first. The output gets piped into
