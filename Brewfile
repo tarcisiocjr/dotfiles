@@ -26,7 +26,7 @@ install php55-intl php55-xdebug composer php55-mcrypt
 # Install other useful tools
 install ack
 install git
-install imagemagick --with-webp
+#install imagemagick --with-webp
 install lynx
 install node
 install pigz
@@ -44,7 +44,6 @@ install git
 install vim
 install ssh-copy-id
 install npm
-install iterm2
 install ngrep
 
 
