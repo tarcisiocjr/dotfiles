@@ -5,12 +5,13 @@ update
 upgrade
 
 # Install GNU core utilities (those that come with OS X are outdated)
-# Don’t forget to add `$(brew --prefix coreutils)/libexec/gnubin` to `$PATH`.
+# Don’t forget to add '$(brew --prefix coreutils)/libexec/gnubin' to '$PATH'.
 install coreutils
-# Install GNU `find`, `locate`, `updatedb`, and `xargs`, g-prefixed
+# Install GNU 'find', 'locate', 'updatedb', and 'xargs', g-prefixed
 install findutils
 # Install Bash 4
 install bash
+install bash-completion
 
 # Install wget with IRI support
 install wget --enable-iri
@@ -26,7 +27,7 @@ install php55-intl php55-xdebug composer php55-mcrypt
 # Install other useful tools
 install ack
 install git
-#install imagemagick --with-webp
+install imagemagick
 install lynx
 install node
 install pigz
@@ -45,7 +46,7 @@ install vim
 install ssh-copy-id
 install npm
 install ngrep
-
+install dash
 
 # Remove outdated versions from the cellar
 cleanup
