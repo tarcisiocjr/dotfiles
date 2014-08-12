@@ -26,3 +26,4 @@ installcask macvim
 installcask miro-video-converter
 installcask sublime-text
 installcask vlc
+installcask filebot
